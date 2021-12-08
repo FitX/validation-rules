@@ -28,14 +28,12 @@ export const passwordMinLength = (value) => value.length >= MIN_LENGTH;
  * @param {string} value
  * @return {boolean}
  */
-// export const passwordContainsLowerCase = (value) => /(?=.*[a-z])/.test(value);
 export const passwordContainsLowerCase = (value) => /\p{Ll}/u.test(value);
 /**
  * Login Password must contain uppercase character
  * @param {string} value
  * @return {boolean}
  */
-// export const passwordContainsUpperCase = (value) => /(?=.*[A-Z])/.test(value);
 export const passwordContainsUpperCase = (value) => /\p{Lu}/u.test(value);
 /**
  * Login Password must contain at least one of the following characters:
