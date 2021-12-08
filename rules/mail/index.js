@@ -13,6 +13,6 @@ export const pureMail = (value) => !!(value && value.trim().length > 0 && patter
  */
 export const domain = (value) => !(value.endsWith('fitx.de') || value.endsWith('@fit-xtern.de'));
 
-const mail = (value) => pureMail(value) && domain(value);
+export const mail = (value) => pureMail(value) && domain(value);
 
 export default mail;
