@@ -9,4 +9,5 @@ import {
  * @return {boolean}
  */
 export const checkType = (value) => GENDER.includes(value);
-export default checkType;
+export const gender = (value) => checkType(value);
+export default gender;
