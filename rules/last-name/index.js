@@ -4,5 +4,5 @@ export const pattern = /^((?!^-)(?!\s\s)[a-zA-Z\u00C0-\u024F\- ](?!-{2})(?!-$)){
  * @param {string} value
  * @return {boolean}
  */
-export const firstName = (value) => !!(value && value.trim().length > 0 && pattern.test(value));
-export default firstName;
+export const lastName = (value) => !!(value && value.trim().length > 0 && pattern.test(value));
+export default lastName;

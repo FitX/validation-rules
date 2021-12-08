@@ -17,20 +17,11 @@ test('Validation should fail on wrong inputs', () => {
   expect(firstName('   ')).toBe(false);
   expect(firstName(null)).toBe(false);
   expect(firstName(false)).toBe(false);
-  // expect(firstName('John2000')).toBe(false);
-  expect(firstName('Jo  hn')).toBe(false);
-  expect(firstName('Jo--hn')).toBe(false);
-  expect(firstName('John-')).toBe(false);
-  expect(firstName('-John')).toBe(false);
+  expect(firstName('John2000')).toBe(false);
 });
 
-test('Validation should pass on correct inputs', () => {
-  expect(firstName('John')).toBe(true);
-  expect(firstName('John-Doe')).toBe(true);
+test('Validation should fail on max Characters', () => {
   expect(firstName(generateString(255))).toBe(true);
-});
-
-test('Validation should fail on max length', () => {
   expect(firstName(generateString(256))).toBe(false);
 });
 
@@ -54,4 +45,22 @@ test('validate last is Dash', () => {
   expect(firstName('Eric-')).toBe(false);
 });
 
+test('validate Name only Alphabetical', () => {
+  expect(firstName('EricKyle')).toBe(true);
+});
 
+test('validate Name with Whitespaces', () => {
+  expect(firstName('Eric Kyle Kenny')).toBe(true);
+});
+
+test('validate Name with Umlauts', () => {
+  expect(firstName('äÄöÖüÜß')).toBe(true);
+});
+
+test('validate Name with Dashes', () => {
+  expect(firstName('Eric-Kyle-Kenny')).toBe(true);
+});
+
+test('validate Name with min Char', () => {
+  expect(firstName('E')).toBe(true);
+});
