@@ -1,14 +1,14 @@
 import {
-  checkType,
+  gender,
 } from './index';
 
 test('Check correct Validation Types', () => {
-  expect(checkType('FEMALE')).toBe(true);
-  expect(checkType('MALE')).toBe(true);
-  expect(checkType('OTHER')).toBe(true);
+  expect(gender('FEMALE')).toBe(true);
+  expect(gender('MALE')).toBe(true);
+  expect(gender('OTHER')).toBe(true);
 });
 
 test('Check wrong Validation Types', () => {
-  expect(checkType()).toBe(false);
-  expect(checkType('blubb')).toBe(false);
+  expect(gender()).toBe(false);
+  expect(gender('blubb')).toBe(false);
 });
