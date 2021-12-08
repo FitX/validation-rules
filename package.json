@@ -1,0 +1,24 @@
+{
+  "name": "@fitx/validation-rules",
+  "version": "1.1.0",
+  "description": "Shared Validation Rules",
+  "main": "index.js",
+  "scripts": {
+    "test:unit": "jest",
+    "test": "npm run test:unit"
+  },
+  "author": "Michael Raguse",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "jest": "^27.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FitX/validation-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FitX/validation-rules/issues"
+  },
+  "homepage": "https://github.com/FitX/validation-rules#readme"
+}
