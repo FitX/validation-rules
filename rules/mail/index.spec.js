@@ -1,6 +1,4 @@
-import {
-  mail,
-} from './index';
+import mail from './index';
 
 describe('Mail Validation', () => {
   test('validates empty input', () => {
@@ -39,7 +37,6 @@ describe('Mail Validation', () => {
     expect(mail('i+bims@gmail.com')).toBe(true);
   });
 
-  /*
   test('validates e-mail with fitx domain +', () => {
     expect(mail('whatever@fitx.de')).toBe(false);
   });
@@ -47,5 +44,4 @@ describe('Mail Validation', () => {
   test('validates e-mail with fitx extern domain +', () => {
     expect(mail('hatever@fit-xtern.de')).toBe(false);
   });
-   */
 })
