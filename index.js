@@ -1,7 +1,2 @@
-import * as rules from 'rules';
-import * as enums from 'enums';
-
-export default {
-  rules,
-  enums,
-}
+export * as rules from 'rules';
+export * as enums from 'enums';
