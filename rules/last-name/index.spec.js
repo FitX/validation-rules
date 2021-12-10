@@ -21,8 +21,8 @@ test('Validation should fail on wrong inputs', () => {
 });
 
 test('Validation should fail on max Characters', () => {
-  expect(lastName(generateString(255))).toBe(true);
-  expect(lastName(generateString(256))).toBe(false);
+  expect(lastName(generateString(64))).toBe(true);
+  expect(lastName(generateString(65))).toBe(false);
 });
 
 test('validate multiple Dashes', () => {
