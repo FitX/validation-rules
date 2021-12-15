@@ -17,6 +17,9 @@ describe('Date of birth', () => {
   test('should be a real Date', () => {
     expect(dateOfBirth('1984-08-11')).toBe(true);
     expect(dateOfBirth('11.08.1984')).toBe(false);
+    // invalid: april has only 30 days
+    expect(dateOfBirth('1984-04-31')).toBe(false);
+    expect(dateOfBirth('1984-04-30')).toBe(true);
   });
   test('should fail under min Age', () => {
     const res14 = subYears(new Date(), 14);

@@ -9,3 +9,9 @@ For Production: > es6
 ```
 npm i @fitx/validation-rules
 ```
+
+## Testing
+We use Jest for Unit Tests
+```
+npm run test
+```
