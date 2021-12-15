@@ -21,6 +21,12 @@ describe('Date of birth', () => {
     expect(dateOfBirth('1984-04-31')).toBe(false);
     expect(dateOfBirth('1984-04-30')).toBe(true);
   });
+
+  test('handles corrupt year', () => {
+    expect(dateOfBirth('198-08-11')).toBe(false);
+    expect(dateOfBirth('198.08.11')).toBe(false);
+  });
+
   test('should fail under min Age', () => {
     const res14 = subYears(new Date(), 14);
     const res15 = subYears(new Date(), 15);

@@ -1,7 +1,7 @@
 import {
   parseISO,
   intervalToDuration,
-  isMatch,
+  isValid,
 } from 'date-fns';
 
 /**
@@ -44,7 +44,7 @@ export const maxAge = (value, compareDate = new Date(), maxAge = 100) => {
  * @param {string} value
  * @return {boolean}
  */
-export const dateOfBirth = (value) => isMatch(value, 'yyyy-MM-dd');
+export const dateOfBirth = (value) => isValid(parseISO(value));
 
 export default {
   dateOfBirth,
