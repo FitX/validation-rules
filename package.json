@@ -1,6 +1,6 @@
 {
   "name": "@fitx/validation-rules",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Shared Validation Rules",
   "main": "index.js",
   "scripts": {
