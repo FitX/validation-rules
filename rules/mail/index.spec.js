@@ -44,4 +44,12 @@ describe('Mail Validation', () => {
   test('validates e-mail with fitx extern domain +', () => {
     expect(mail('hatever@fit-xtern.de')).toBe(false);
   });
+
+  test('validates e-mail with Uppercase Character on Start', () => {
+    expect(mail('Du@web.de')).toBe(true);
+  });
+
+  test('validates e-mail with Uppercase Characters', () => {
+    expect(mail('lOreM@wEb.de')).toBe(true);
+  });
 })
