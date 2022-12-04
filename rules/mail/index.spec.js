@@ -36,6 +36,10 @@ describe('Mail Validation', () => {
   test('validates e-mail with +', () => {
     expect(mail('i+bims@gmail.com')).toBe(true);
   });
+  
+    test('validates e-mail with underline and dot', () => {
+    expect(mail('i.b._ims@gmail.com')).toBe(true);
+  });
 
   test('validates e-mail with fitx domain +', () => {
     expect(mail('whatever@fitx.de')).toBe(false);
